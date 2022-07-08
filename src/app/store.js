@@ -4,14 +4,17 @@ import { campsitesReducer } from '../features/campsites/campsitesSlice';
 import { commentsReducer } from '../features/comments/commentsSlice';
 import { partnerReducer } from '../features/partners/partnerSlice';
 import { promotionsReducer } from '../features/promotions/promotionsSlice';
+import { userReducer } from '../features/user/userSlice';
+
 
 
 export const store = configureStore({
   reducer: {
+    user: userReducer,
     campsites: campsitesReducer,
     comments: commentsReducer,
     partners: partnerReducer,
-    promotions: promotionsReducer
+    promotions: promotionsReducer,
   },
   middleware:(getDefaultMiddleware) => getDefaultMiddleware().concat([logger])
 });

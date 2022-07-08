@@ -43,7 +43,7 @@ const CommentForm = ({ campsiteId }) => {
         <ModalBody>
           <Formik
             initialValues={{
-              rating: "undefined",
+              rating: undefined,
               author: "",
               commentText: "",
             }}
